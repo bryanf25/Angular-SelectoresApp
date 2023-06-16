@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { CountriesService } from './countries.service';
 import { HttpClientModule } from '@angular/common/http';
+import { mockCountry } from 'src/app/Mocks/countryMock';
 
 fdescribe('CountriesService', () => {
   let service: CountriesService;
@@ -25,6 +26,12 @@ const regionsSize = service.regions.length
 // assert
     expect(regionsSize).toBe(5);
   });
+
+  fit('should call getCountriesByRegion  return an array with smallCountries ', () => {
+    // arrange
+    // spyOn(service,'getCountriesByRegion').and.returnValue(mockCountry.)
+    // assert
+      });
 
 
 });
