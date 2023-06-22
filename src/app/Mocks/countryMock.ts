@@ -25,7 +25,7 @@ export const mockCountry =
             "MEX"
         ]
     },
-    countries: [
+    smallcountries: [
         {
             name: "United States",
             cca3: "USA",
@@ -41,14 +41,30 @@ export const mockCountry =
                 "CAN",
                 "MEX"
             ]
+        }
+    ],
+    countries:[
+        {
+            "name": {
+                "common": "Colombia",
+                "official": "Republic of Colombia"
+            },
+            "cca3": "COL",
+            "borders": [
+                "BRA",
+                "ECU",
+                "PAN",
+                "PER",
+                "VEN"
+            ]
         },
         {
-            name: "United States",
-            cca3: "USA",
-            borders: [
-                "CAN",
-                "MEX"
-            ]
+            "name": {
+                "common": "Turks and Caicos Islands",
+                "official": "Turks and Caicos Islands"
+            },
+            "cca3": "TCA",
+            "borders": []
         }
     ],
     randomBorders:[

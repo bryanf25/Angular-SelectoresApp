@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 
-fdescribe('SelectorPageComponent', () => {
+describe('SelectorPageComponent', () => {
   let component: SelectorPageComponent;
   let fixture: ComponentFixture<SelectorPageComponent>;
   let service: CountriesService
@@ -37,7 +37,7 @@ fdescribe('SelectorPageComponent', () => {
     const initalRegion: string = 'Europe'
     const finalRegion: string = 'America'
     component.myForm.get('region')?.setValue(initalRegion)
-    spyOn(service, 'getCountriesByRegion').and.returnValue(of(mockCountry.countries))
+    spyOn(service, 'getCountriesByRegion').and.returnValue(of(mockCountry.smallcountries))
 
 
     // act
@@ -62,7 +62,7 @@ fdescribe('SelectorPageComponent', () => {
   it('should show countries select when region has value', () => {
     // Arrange
     const regionSelect: HTMLSelectElement = fixture.nativeElement.querySelector('#region');
-    const spy = spyOn(service, 'getCountriesByRegion').and.returnValue(of(mockCountry.countries))
+    const spy = spyOn(service, 'getCountriesByRegion').and.returnValue(of(mockCountry.smallcountries))
 
     // act
     // trigger the event change
@@ -82,7 +82,7 @@ fdescribe('SelectorPageComponent', () => {
     // Arrange
     const initialCountry = 'USA'
     const alphaSpy = spyOn(service, 'getCountryByAlphaCode').and.returnValue(of(mockCountry.smallcountry))
-    const bordersSpy = spyOn(service, 'getCountryBordersByCodes').and.returnValue(of(mockCountry.countries))
+    const bordersSpy = spyOn(service, 'getCountryBordersByCodes').and.returnValue(of(mockCountry.smallcountries))
 
     // act
     component.myForm.get('country')?.setValue(initialCountry)

@@ -32,7 +32,7 @@ export class CountriesService {
     return this.http.get<Country[]>(url)
       .pipe(
         map(countries => countries.map(country => ({
-          name: country.name.common,
+          name: country.name.common ,
           cca3: country.cca3,
           borders: country.borders ?? []
         })

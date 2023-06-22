@@ -14,38 +14,38 @@ export interface SmallCountry{
 export interface Country {
     name:         Name;
     tld?:         string[];
-    cca2:         string;
+    cca2?:         string;
     ccn3?:        string;
     cca3:         string;
     cioc?:        string;
     independent?: boolean;
-    status:       Status;
-    unMember:     boolean;
-    currencies:   Currencies;
-    idd:          Idd;
-    capital:      string[];
-    altSpellings: string[];
-    region:       string;
-    subregion:    Subregion;
-    languages:    Languages;
-    translations: { [key: string]: Translation };
-    latlng:       number[];
-    landlocked:   boolean;
+    status?:       Status;
+    unMember?:     boolean;
+    currencies?:   Currencies;
+    idd?:          Idd;
+    capital?:      string[];
+    altSpellings?: string[];
+    region?:       string;
+    subregion?:    Subregion;
+    languages?:    Languages;
+    translations?: { [key: string]: Translation };
+    latlng?:       number[];
+    landlocked?:   boolean;
     borders?:     string[];
-    area:         number;
-    demonyms:     Demonyms;
-    flag:         string;
-    maps:         Maps;
-    population:   number;
+    area?:         number;
+    demonyms?:     Demonyms;
+    flag?:         string;
+    maps?:         Maps;
+    population?:   number;
     gini?:        { [key: string]: number };
     fifa?:        string;
-    car:          Car;
-    timezones:    string[];
-    continents:   string[];
-    flags:        Flags;
-    coatOfArms:   CoatOfArms;
-    startOfWeek:  StartOfWeek;
-    capitalInfo:  CapitalInfo;
+    car?:          Car;
+    timezones?:    string[];
+    continents?:   string[];
+    flags?:        Flags;
+    coatOfArms?:   CoatOfArms;
+    startOfWeek?:  StartOfWeek;
+    capitalInfo?:  CapitalInfo;
     postalCode?:  PostalCode;
 }
 
@@ -187,12 +187,11 @@ export interface Maps {
 export interface Name {
     common:     string;
     official:   string;
-    nativeName: { [key: string]: Translation };
 }
 
 export interface Translation {
-    official: string;
-    common:   string;
+    official?: string;
+    common?:   string;
 }
 
 export interface PostalCode {
